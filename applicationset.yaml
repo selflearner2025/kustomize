@@ -19,8 +19,8 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/org/ARGOCD-JOBS
-        targetRevision: HEAD
+        repoURL: https://github.com/selflearner2025/kustomize.git
+        targetRevision: master
         path: "jobs/{{env}}"          # ArgoCD auto detects kustomization.yaml
       destination:
         server: https://kubernetes.default.svc
