@@ -12,7 +12,7 @@ spec:
   #selector:
   #  matchLabels:
   #    name: camunda-bpmn-sync-poc
-  ttlSecondsAfterFinished: 400 # how long to keep pods
+  #ttlSecondsAfterFinished: 400 # how long to keep pods
   activeDeadlineSeconds: 600 # how long should the job run
   backoffLimit: 1 # how many retries
   template:
