@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: camunda-bpmn-artifact
+data:
+  artifactName: bpmn-poc.tar.gz
+  artifactSha256: "281b003284e8145b611f02ac4c141736e8ffeeb9c2cf53f526f2692c428fc4fd"
+  # command sha256sum bpmn-poc.tar.gz
+  artifactUrl: "https://sourcebucket18389038903.s3.us-east-1.amazonaws.com/qa/bpmn-poc.tar.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZ7AE7VQOAUZY5SO4%2F20260130%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260130T090508Z&X-Amz-Expires=7200&X-Amz-SignedHeaders=host&X-Amz-Signature=bdd04f9a53daea2d33905adc04ebca653079ba8c465bd6bcd1e1afad68f8560c"

@@ -1,0 +1,40 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: camunda-bpmn-sync-poc
+  annotations:
+    argocd.argoproj.io/hook: Sync
+    #delete hook before next sync
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+    argocd.argoproj.io/sync-wave: "1"
+    
+spec:
+  #selector:
+  #  matchLabels:
+  #    name: camunda-bpmn-sync-poc
+  ttlSecondsAfterFinished: 400 # how long to keep pods
+  activeDeadlineSeconds: 600 # how long should the job run
+  backoffLimit: 1 # how many retries
+  template:
+    spec:
+      restartPolicy: Never
+      volumes:
+        - name: bpmn
+          emptyDir: {}
+        - name: artifact-info
+          configMap:
+            name: camunda-bpmn-artifact
+      containers:
+        - name: downloader
+          image: alpine:3.20
+          command: ["/bin/sh", "-c"]
+          args:
+            - |
+               echo "now deploy to camunda"
+               echo "hello"
+               echo "deploy some more"
+          volumeMounts:
+            - name: bpmn
+              mountPath: /bpmn
+            - name: artifact-info
+              mountPath: /artifact

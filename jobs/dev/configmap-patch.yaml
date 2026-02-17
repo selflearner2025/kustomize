@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: camunda-bpmn-artifact
+data:
+  artifactUrl: "https://dev-artifact-url/file.bpmn"
+  environment: "dev"
