@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: camunda-bpmn-artifact-repo-a
 data:
-  artifactUrl: "https://9999-dev-artifact-url/file.bpmn"
+  artifactUrl: "https://777-dev-artifact-url/file.bpmn"
   environment: "develop"
