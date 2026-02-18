@@ -4,5 +4,5 @@ configMapGenerator:
   - name: violations-management-app-cm
     behavior: merge
     literals:
-      - artifactUrl="https://repo-a-changed-11111dev-artifact-url/file.bpmn"
+      - artifactUrl="https://violations-app-changed-11111dev-artifact-url/file.bpmn"
       - environment="dev"
