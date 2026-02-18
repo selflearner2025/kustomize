@@ -9,8 +9,8 @@ spec:
         elements:
           - env: dev
             namespace: camunda-dev
-    #      - env: qa
-    #        namespace: camunda-qa
+          - env: qa
+            namespace: camunda-qa
     #      - env: prod
     #        namespace: camunda-prod
   template:
