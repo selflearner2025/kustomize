@@ -1,5 +1,10 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+configMapGenerator:
+  - name: camunda-bpmn-artifact-repo-a
+    literals:
+      - artifactUrl="https://default-artifact-url/file.bpmn"
+      - environment="base"
 resources:
   - job.yaml
-  - configmap.yaml
+
