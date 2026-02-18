@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: camunda-bpmn-artifact-repo-b
+data:
+  artifactUrl: "https://111111qa-artifact-url/file.bpmn"
+  environment: "qa"
