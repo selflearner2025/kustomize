@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: contributor-agreement-app-cm
 data:
-  artifactUrl: "https://777-dev-artifact-url/file.bpmn"
+  artifactUrl: "https://CONTRIBUTOR-dev-artifact-url/file.bpmn"
   environment: "develop"
