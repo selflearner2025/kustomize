@@ -1,7 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: camunda-dev
+namespace: kustomize-new-dev
 resources:
-  - ../base/repo-a
-  - ../base/repo-b
+  - ../base/contributor-agreement-app
+  - ../base/violations-management-app
 

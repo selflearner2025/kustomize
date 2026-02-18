@@ -1,26 +1,26 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: camunda-deployer
+  name: kustomize-deployer
   namespace: argocd
 spec:
   generators:
     - list:
         elements:
           - env: dev
-            namespace: camunda-dev
-    #      - env: qa
-    #        namespace: camunda-qa
+            namespace: kustomize-new-dev
+          - env: qa
+            namespace: kustomize-new-qa
     #      - env: prod
-    #        namespace: camunda-prod
+    #        namespace: kustomize-new-prod
   template:
     metadata:
-      name: "camunda-jobs-{{env}}"
+      name: "kustomize-jobs-{{env}}"
     spec:
       project: default
       source:
         repoURL: https://github.com/selflearner2025/kustomize.git
-        targetRevision: master
+        targetRevision: test
         path: "jobs/{{env}}"          # ArgoCD auto detects kustomization.yaml
       destination:
         server: https://kubernetes.default.svc

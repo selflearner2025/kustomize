@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: camunda-bpmn-sync-poc-repo-b
+  name: contributor-agreement-app-job
   annotations:
     argocd.argoproj.io/hook: Sync
     argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
@@ -18,7 +18,7 @@ spec:
           emptyDir: {}
         - name: artifact-info
           configMap:
-            name: camunda-bpmn-artifact-repo-b
+            name: contributor-agreement-app-cm
       containers:
         - name: downloader
           image: alpine:3.20
@@ -40,7 +40,7 @@ spec:
               echo "now deploy to camunda"
               echo "hello"
               echo "deploy some more"
-              echo "repoa-b"
+              echo "repoa-a"
           volumeMounts:
             - name: bpmn
               mountPath: /bpmn

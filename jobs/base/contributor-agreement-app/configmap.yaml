@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: contributor-agreement-app-cm
+data:
+  artifactName: repo-abpmn-poc.tar.gz
+  artifactSha256: "repo-a03284e8145b611f02ac4c141736e8ffeeb9c2cf53f526f2692c428fc4fd"
+  # command sha256sum bpmn-poc.tar.gz
+  artifactUrl: "abcd.efgh"
