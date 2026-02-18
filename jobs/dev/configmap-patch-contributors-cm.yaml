@@ -4,5 +4,5 @@ configMapGenerator:
   - name: contributor-agreement-app-cm
     behavior: merge
     literals:
-      - artifactUrl="https://change-contributor-changed-11000dev-artifact-url/file.bpmn"
+      - artifactUrl="https://chnewtributor-changed-11000dev-artifact-url/file.bpmn"
       - environment="dev"
