@@ -1,9 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: camunda-dev
-resources:          # replaces bases
+namespace: camunda-qa
+resources:
   - ../base/repo-a
   - ../base/repo-b
-patches:
-  - path: configmap-patch-repo-a.yaml
-  - path: configmap-patch-repo-b.yaml
+
