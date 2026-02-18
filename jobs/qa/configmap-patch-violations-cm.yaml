@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: violations-management-app-cm
+data:
+  artifactUrl: "https://violations-qa-artifact-url/file.bpmn"
+  environment: "qa"
