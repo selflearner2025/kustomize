@@ -1,6 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: camunda-dev
+namespace: camunda-qa
 resources:          # replaces bases
   - ../base/repo-a
   - ../base/repo-b
