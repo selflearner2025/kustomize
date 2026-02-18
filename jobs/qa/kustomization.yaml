@@ -4,4 +4,7 @@ namespace: kustomize-new-qa
 resources:
   - ../base/contributor-agreement-app
   - ../base/violations-management-app
+patches:
+ - path: configmap-patch-repo-a.yaml
+ - path: configmap-patch-repo-b.yaml
 

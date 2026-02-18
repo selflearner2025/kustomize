@@ -4,4 +4,8 @@ namespace: kustomize-new-dev
 resources:
   - ../base/contributor-agreement-app
   - ../base/violations-management-app
+patches:
+  - path: configmap-patch-contributors-cm.yaml
+  - path: configmap-patch-violations-cm.yaml
+  
 
