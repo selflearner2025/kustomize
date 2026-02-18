@@ -5,4 +5,4 @@ configMapGenerator:
     behavior: merge
     literals:
       - artifactUrl="https://repo-a-changed-11111dev-artifact-url/file.bpmn"
-      - environment="dev"
+      - environment="development"
