@@ -1,0 +1,48 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: camunda-bpmn-sync-poc-repo-b
+  annotations:
+    argocd.argoproj.io/hook: Sync
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+    argocd.argoproj.io/sync-wave: "1"
+    
+spec:
+  activeDeadlineSeconds: 600
+  backoffLimit: 1
+  template:
+    spec:
+      restartPolicy: Never
+      volumes:
+        - name: bpmn
+          emptyDir: {}
+        - name: artifact-info
+          configMap:
+            name: camunda-bpmn-artifact-repo-b
+      containers:
+        - name: downloader
+          image: alpine:3.20
+          command: ["/bin/sh", "-c"]
+          args:
+            - |
+              echo "===== Listing mounted ConfigMap files ====="
+              ls -la /artifact
+
+              echo "===== Printing ConfigMap contents ====="
+              for file in /artifact/*; do
+                echo "---- $file ----"
+                cat "$file"
+                echo ""
+              done
+
+              echo "===== End of ConfigMap dump ====="
+
+              echo "now deploy to camunda"
+              echo "hello"
+              echo "deploy some more"
+              echo "repoa-b"
+          volumeMounts:
+            - name: bpmn
+              mountPath: /bpmn
+            - name: artifact-info
+              mountPath: /artifact
