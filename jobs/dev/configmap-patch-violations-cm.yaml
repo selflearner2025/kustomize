@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: violations-management-app-cm
 data:
-  artifactUrl: "https://violations-dev-artifact-url/file.bpmn"
+  artifactUrl: "https://violations-dev-artifact-updated-today-url/file.bpmn"
   environment: "develop"
