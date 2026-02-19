@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: violations-management-app-cm
 data:
-  artifactUrl: "https://violations-qa-artifact-url/file.bpmn"
+  artifactUrl: "https://violations-qa-artifact-url-changed/file.bpmn"
   environment: "qa"
