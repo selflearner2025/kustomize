@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: contributor-agreement-app-cm
 data:
-  artifactUrl: "https://777-qa-artifact-url/file.bpmn"
+  artifactUrl: "https://777-qa1111-artifact-url/file.bpmn"
   environment: "qa"
